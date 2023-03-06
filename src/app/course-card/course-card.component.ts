@@ -21,4 +21,8 @@ export class CourseCardComponent {
     console.log('clicked');
     this.courseSelected.emit(this.course);
   }
+
+  isImageVisible() {
+    return this.course && this.course.iconUrl;
+  }
 }
