@@ -29,4 +29,7 @@ export class AppComponent implements AfterViewInit {
 
     }
 
+  handleToggle(highlighted: boolean) {
+    console.log('Is highlighted: ', highlighted);
+  }
 }
