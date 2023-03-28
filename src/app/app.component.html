@@ -9,11 +9,11 @@
 
 <div class="courses" *ngIf="courses[0] as course">
 
-    <course-card highlighted
+    <course-card highlighted #highlighter="hl"
                  (toggleHighlight)="handleToggle($event)"
             (courseSelected)="onCourseSelected($event)"
+                 (dblclick)="highlighter.toggle()"
                  [course]="course">
-
         <course-image [src]="course.iconUrl"></course-image>
 
         <div class="course-description">
